@@ -1,1 +1,67 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meena Home & Decor - Online Order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="lang-switch">
+            <button id="en-btn" class="lang-btn active">English</button>
+            <button id="ar-btn" class="lang-btn">العربية</button>
+        </div>
+        <img src="logo.png" alt="Meena Home & Decor Logo" class="logo">
+        <h1>MEENA</h1>
+        <p class="subtitle">HOME &amp; DECOR</p>
+    </header>
+    <main>
+        <section class="hero">
+            <h2 data-en="Style Your Home with Meena" data-ar="زيّن منزلك مع MEENA HOME & DECOR">Style Your Home with Meena</h2>
+            <p data-en="Order beautiful home decor items online and add a personal touch to your space."
+               data-ar="اطلب أجمل ديكورات المنزل عبر الإنترنت وأضف لمسة شخصية لمنزلك.">
+                Order beautiful home decor items online and add a personal touch to your space.
+            </p>
+            <a href="#order" class="cta-button" data-en="Order Now" data-ar="اطلب الآن">Order Now</a>
+        </section>
+        <section class="order-section" id="order">
+            <h3 data-en="Place Your Order" data-ar="قدّم طلبك">Place Your Order</h3>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="item" data-en="Select Item" data-ar="اختر المنتج">Select Item</label>
+                    <select id="item" required>
+                        <option value="" data-en="-- Choose an item --" data-ar="-- اختر منتجاً --">-- Choose an item --</option>
+                        <option value="Decorative Vase" data-en="Decorative Vase" data-ar="مزهرية ديكور">Decorative Vase</option>
+                        <option value="Wall Art" data-en="Wall Art" data-ar="فن جداري">Wall Art</option>
+                        <option value="Cushion Set" data-en="Cushion Set" data-ar="طقم وسائد">Cushion Set</option>
+                        <option value="Table Lamp" data-en="Table Lamp" data-ar="مصباح طاولة">Table Lamp</option>
+                        <option value="Rug" data-en="Rug" data-ar="سجادة">Rug</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity" data-en="Quantity" data-ar="الكمية">Quantity</label>
+                    <input type="number" id="quantity" min="1" max="20" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="address" data-en="Delivery Address" data-ar="عنوان التوصيل">Delivery Address</label>
+                    <textarea id="address" rows="2" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn" data-en="Submit Order" data-ar="إرسال الطلب">Submit Order</button>
+            </form>
+            <div id="confirmation" class="confirmation"></div>
+        </section>
+    </main>
+    <footer>
+        <span data-en="&copy; 2025 Meena Home & Decor. All rights reserved."
+              data-ar="&copy; 2025 Meena Home & Decor. جميع الحقوق محفوظة.">
+            &copy; 2025 Meena Home & Decor. All rights reserved.
+        </span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
